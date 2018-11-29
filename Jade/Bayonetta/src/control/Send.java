@@ -10,7 +10,7 @@ import jade.core.Agent;
 import jade.domain.FIPAAgentManagement.Envelope;
 import jade.lang.acl.ACLMessage;
 
-public class prueba {
+public class Send {
 
 	public static void enviarMensaje(Agent agent, Object objeto)
     {
