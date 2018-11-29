@@ -91,7 +91,7 @@ public class CyclicEnviar extends CyclicBehaviour {
 											pack.setReceptor(conexiones[i]);
 											System.out.println("soy el agente "+myAgent.getLocalName()+"enviando mensaje a "+pack.getReceptor().getName().getLocalName());
 											String id = Utils.enviarPack(pack);
-											prueba.enviarMensaje(myAgent, id);
+											Send.enviarMensaje(myAgent, id);
 											System.out.println("mensaje enviado"/*+myAgent.getLocalName()+conexiones[j].getName().getLocalName()+id*/);
 											flag=true;
 											/*
