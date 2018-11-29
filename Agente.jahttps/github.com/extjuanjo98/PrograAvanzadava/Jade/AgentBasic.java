@@ -18,11 +18,11 @@ public class Agente extends Agent {
 	
 	// conexiones de los agentes
 	
-	private String [] conexionagente1	=	{"EspaÒol"};
-	private String [] conexionagente2	= 	{"FrancÈs", "PortuguÈs"};
-	private String [] conexionagente3	= 	{"Alem·n","InglÈs"};
-	private String [] conexionagente4	= 	{"EspaÒol","Italiano"};
-	private String [] conexionagente5	= 	{"FrancÈs","Italiano"};
+	private String [] conexionagente1	=	{"Espa√±ol"};
+	private String [] conexionagente2	= 	{"Franc√©s", "Portugu√©s"};
+	private String [] conexionagente3	= 	{"Alem√°n","Ingl√©s"};
+	private String [] conexionagente4	= 	{"Espa√±ol","Italiano"};
+	private String [] conexionagente5	= 	{"Franc√©s","Italiano"};
 	
 	
 	//Comportamientos
@@ -87,7 +87,7 @@ public class Agente extends Agent {
 			sd.addOntologies("Ontologia");
 	
 			sd.addLanguages(new SLCodec().getName());
-			//aÒadimos el servicio al agente
+			//a√±adimos el servicio al agente
 			dfd.addServices(sd);
 			//guardamos los servicios que da el agente
 		}
