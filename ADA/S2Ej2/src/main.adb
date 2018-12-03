@@ -1,8 +1,5 @@
 with Text_IO;
 
--- Pedir al usuario dimensiones (filas*columnas)
--- rellenala con los número múltiplos de 3.765
--- Imprimir en pantalla a fila por linea
 procedure Main is
    filas : Natural;
    columnas : Natural;
@@ -12,35 +9,34 @@ procedure Main is
    type matriz is array(Positive range <>, Positive range <>) of Float;
 
 begin
-   --Pedimos los datos al usuario
-   Text_IO.Put("Introduce el n de filas: ");
+   Text_IO.Put("Introduce el numero de filas: ");
    Integer_IO.Get(filas);
 
-   Text_IO.Put("Introduce el n de columnas: ");
+   Text_IO.Put("Introduce el numero de columnas: ");
    Integer_IO.Get(columnas);
 
    declare
-      matrizValores : matriz(1..filas, 1..columnas);
-      iterator : Integer;
+      mat : matriz(1..filas, 1..columnas);
+      inte : Integer;
    begin
       Text_IO.Put("Asignando numeros multiplos de 3.765 a la matriz... ");
-      iterator := 1;
+      inte := 1;
       for i in 1..filas
       loop
          for j in 1..columnas
          loop
-            matrizValores(i,j) := 3.765 * float(iterator);
-            iterator := iterator + 1;
+            mat(i,j) := 3.765 * float(inte);
+            inte := inte + 1;
          end loop;
       end loop;
 
       Text_IO.Put_Line("");
-      Text_IO.Put_Line("Matriz: ");
+      Text_IO.Put_Line("La matriz es: ");
       for i in 1..filas
       loop
          for j in 1..columnas
          loop
-           Float_IO.Put( matrizValores(i,j));
+           Float_IO.Put( mat(i,j));
          end loop;
          Text_IO.Put_Line("");
       end loop;
