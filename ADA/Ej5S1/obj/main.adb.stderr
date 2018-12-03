@@ -1,0 +1,2 @@
+main.adb:13:09: warning: value not in range of type "probabilidad" defined at line 4
+main.adb:13:09: warning: "Constraint_Error" will be raised at run time

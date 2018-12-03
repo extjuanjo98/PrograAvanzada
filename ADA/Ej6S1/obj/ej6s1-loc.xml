@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Draenix\Desktop\Sesion1\ej6.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 11" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 5" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 10" line=" 13" >
+      <vfs_project />
+      <vfs_file>D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >D:\Universidad\PrograAvanzada\ADA\Ej6S1\ej6s1.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >D:\Universidad\PrograAvanzada\ADA\Ej6S1\ej6s1.gpr</vfs_project>
+      <vfs_file >D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 23" line=" 6">
+      <vfs_project >D:\Universidad\PrograAvanzada\ADA\Ej6S1\ej6s1.gpr</vfs_project>
+      <vfs_file >D:\Universidad\PrograAvanzada\ADA\Ej6S1\src\main.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
