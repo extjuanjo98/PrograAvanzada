@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+D:\Universidad\PrograAvanzada\ADA\S2Ej2\s2ej2.gpr
+20181203192736
+[BOUND OBJECT FILES]
+D:\Universidad\PrograAvanzada\ADA\S2Ej2\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LD:\Universidad\PrograAvanzada\ADA\S2Ej2\obj\
+-LD:\Universidad\PrograAvanzada\ADA\S2Ej2\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
