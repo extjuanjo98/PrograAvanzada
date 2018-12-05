@@ -1,66 +1,43 @@
 with Text_IO;
 
--- Traducir un numero romano introducido por consola
--- se utilizara un array de registros con dos campos
--- ( caracter romano - entero )
--- MCMXC = 1990
--- MMVIII = 2008
--- MDCLXVI = 1666
+
+
 procedure Main is
-   type T_Romano is (I,V,X,L,C,D,M);
-   type T_Romano_Minus is (i,v,x,l,c,d,m);
-   type T_RomanoValue is array(1..8) of Integer;
-
-   type T_Equivalencia is
-      record
-         numRomano : T_Romano;
-         numRomanoMinus : T_Romano_Minus;
-         valores : T_RomanoValue := (1,5,10,50,100,500,1000);
-      end record;
-
-   inputString : String(1..8);
-   equivalencia : T_Equivalencia;
-   function transformar(numero: in out Integer; siguiente : in String;actual: in String) is
-   begin
-      loop
-         exit when (equivalencia.numRomano = actual)
-           if eq
-   end transformar
-
-
-
-
-   function igualito(Left  : in String; Right : in T_Romano) return Boolean is
-   begin
-      return Left = T_Romano'Image (Right);
-   end igualito;
-
-   procedure convertir(numeroRomano: in Character)  is
-   begin
-      equivalencia.numRomano := T_Romano'First;
-      loop
-         exit when (equivalencia.numRomano = T_Romano'Last);
-         Text_IO.Put("    ");
-         Text_IO.Put(numeroRomano'Image);
-         Text_IO.Put("-");
-         Text_IO.Put(T_Romano'Image(equivalencia.numRomano));
-         Text_IO.Put("    ");
-         if( igualito(numeroRomano'Image, equivalencia.numRomano) ) then
-            Text_IO.Put_Line(T_Romano'Image(equivalencia.numRomano));
-         end if;
-         equivalencia.numRomano := T_Romano'Succ(equivalencia.numRomano);
-      end loop;
-      Text_IO.Put_Line(T_Romano'Image(equivalencia.numRomano));
-   end convertir;
-
+   package Integer_IO is new Text_IO.Integer_IO(Integer);
+   texto : String(1..14);
+   indexletra : String(1 .. 14);
+   num:  array (1..80) of Integer;
+   indexnumeros :  array (1..14) of Integer :=(1,1,5,5,10,10,50,50,100,100,500,500,1000,1000);
+   valor:Natural;
+   total:Integer;
+   cero:Integer;
 begin
-  Text_IO.Put("Introduce un caracter romano: ");
-  Text_IO.Get(inputString);
 
-  Text_IO.Put("El caracter equivale a: ");
-  for i in 1..8
-   loop
-      convertir(inputString(i));
+   indexletra :=('I','i','V','v','X','x','L','l','C','c','D','d','M','m');
+   Text_IO.Put ("Escribe un numero romano:");
+   Text_IO.Get_Line (texto, valor);
+   total:=0;
+   cero:=0;
+   for i in 1..valor loop
+
+      for j in 1..14 loop
+         if texto(i)=indexletra(j) then
+            num(i):= indexnumeros(j);
+            num(i+1):=0;
+         else
+
+            null;
+         end if;
+      end loop;
+
    end loop;
+   for i in 1..valor loop
+      if num(i)<num(i+1) then
+         total:=total-num(i);
+      else
+         total:=num(i)+total;
+      end if;
+	end loop;
+   Integer_IO.Put(total);
 
 end Main;

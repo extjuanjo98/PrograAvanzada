@@ -6,18 +6,21 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_DEFAULT_INITIALIZATION
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		cbee42d3 NE OO SU
+U main%b		main.adb		96260c44 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
-Z interfaces%s		interfac.ads		interfac.ali
-Z system%s		system.ads		system.ali
-Z system.img_char%s	s-imgcha.adb		s-imgcha.ali
-Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+Z ada.text_io.integer_io%s
 W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20180524051736 76789da1 ada%s
@@ -26,16 +29,17 @@ D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
+D a-tiinau.ads		20180524051736 8114c8e4 ada.text_io.integer_aux%s
+D a-tiinio.ads		20180524051736 aa04e5d6 ada.text_io.integer_io%s
+D a-tiinio.adb		20180524051736 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20181203195128 ea5c8a4b main%b
+D main.adb		20181205222234 b794c4dc main%b
 D system.ads		20180524051738 32a08138 system%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
 D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
-D s-imgcha.ads		20180524051736 9c3458e7 system.img_char%s
-D s-imenne.ads		20180524051736 614c06c0 system.img_enum_new%s
 D s-parame.ads		20180524051738 48ec542b system.parameters%s
 D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
@@ -47,41 +51,24 @@ D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
 D text_io.ads		20180524051736 21b2c898 text_io%s
 X 6 a-textio.ads
-240U14*Get 10|49s11
-242U14*Put 10|34s18 35s18 36s18 37s18 38s18 48s11 51s11
-263U14*Put_Line 10|40s21 44s15
-X 10 main.adb
-9U11*Main 9b11 57l5 57t9
-10E9 T_Romano 10e36 16r22 24r52 26r21 31r33 33r46 37r22 40r30 42r36 44r24
-10n22 I{10E9}
-10n24 V{10E9}
-10n26 X{10E9}
-10n28 L{10E9}
-10n30 C{10E9}
-10n32 D{10E9}
-10n34 M{10E9}
-11E9 T_Romano_Minus 11e42 17r27
-11n28 i{11E9}
-11n30 v{11E9}
-11n32 x{11E9}
-11n34 l{11E9}
-11n36 c{11E9}
-11n38 d{11E9}
-11n40 m{11E9}
-12A9 T_RomanoValue(integer)<integer> 18r20
-14R9 T_Equivalencia 19e17 22r19
-16e10 numRomano{10E9} 31m20 33r34 37r50 39r56 40r58 42m23 42r63 44r52
-17e10 numRomanoMinus{11E9}
-18a10 valores{12A9}
-21a4 inputString{string} 49m15 54r17
-22r4 equivalencia{14R9} 31m7 33r21 37r37 39r43 40r45 42m10 42r50 44r39
-24V13 igualito{boolean} 24b13 24>22 24>41 27l8 27t16 39s14
-24a22 Left{string} 26r14
-24e41 Right{10E9} 26r37
-29U14 convertir 29b14 29>24 45l8 45t17 54s7
-29e24 numeroRomano{character} 35r22 39r23
-52i7 i{integer} 54r29
-X 26 text_io.ads
-24K9*Text_IO=24:29 10|1w6 34r10 35r10 36r10 37r10 38r10 40r13 44r7 48r3 49r3
-. 51r3
+242U14*Put 13|17s12
+249U14*Get_Line 13|18s12
+X 8 a-tiinio.ads
+46k21*Integer_IO 85e27 13|6r38
+66U14 Put 13|41s15[6]
+X 13 main.adb
+5U11*Main 5b11 43l5 43t9
+6K12 Integer_IO[8|46] 41r4
+7a4 texto{string} 18m22 24r13
+8a4 indexletra{string} 16m4 24r22
+9a4 num(integer) 25m13 26m13 35r10 35r17 36r23 38r17
+10a4 indexnumeros(integer) 25r22
+11i4 valor{natural} 18m29 21r16 34r16
+12i4 total{integer} 19m4 36m10 36r17 38m10 38r24 41r19
+13i4 cero{integer} 20m4
+21i8 i{integer} 24r19 25r17 26r17
+23i11 j{integer} 24r33 25r35
+34i8 i{integer} 35r14 35r21 36r27 38r21
+X 27 text_io.ads
+24K9*Text_IO=24:29 13|1w6 6r30 17r4 18r4
 
