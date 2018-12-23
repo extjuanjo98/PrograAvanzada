@@ -1,2 +1,2 @@
 # PrograAvanzada
-Lo siento chavales pero jade es mierda y no sirve para nada
+Lo siento chavales pero jade y ada son una mierda y no sirven para nada
